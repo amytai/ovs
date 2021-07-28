@@ -94,6 +94,10 @@ void sset_intersect(struct sset *, const struct sset *);
           : false);                                 \
          (NAME) = (NEXT))
 
+/* Functions for DDlog. */
+const char *sset_first(const struct sset *);
+const char *sset_next(const struct sset *, const char *);
+
 const char **sset_array(const struct sset *);
 const char **sset_sort(const struct sset *);
 

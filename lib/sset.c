@@ -372,3 +372,11 @@ sset_sort(const struct sset *set)
     qsort(array, sset_count(set), sizeof *array, compare_string_pointers);
     return array;
 }
+
+const char *sset_first(const struct sset *ss) {
+    return SSET_FIRST(ss);
+}
+
+const char *sset_next(const struct sset *ss, const char *name) {
+    return SSET_NEXT(ss, name);
+}
